@@ -248,11 +248,12 @@ function startAnimation() {
    $('#div-web-master').delay(500).animate({bottom:'0px'},1000);
    
    // attiva il background musicale
-   var iframe = document.getElementById("sound-iframe");
-   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-   var audio = innerDoc.getElementById("audio-sound");
-   audio.currentTime = 84.5;
-   audio.ontimeupdate = function() { playUptoSecond(audio,84.5+32.8) };
+   let iframe = document.getElementById("sound-iframe");
+   let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+   let audio = innerDoc.getElementById("audio-sound");
+   let start_time = 0
+   audio.currentTime = start_time
+   audio.ontimeupdate = function() { playUptoSecond(audio,start_time+32.8) };
    audio.play();
   
    /*
