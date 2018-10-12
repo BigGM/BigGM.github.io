@@ -1,0 +1,115 @@
+<style>
+
+.cover-contatto {
+   position:absolute;
+   width:100%;
+   height:100%;
+   z-index:1000;
+   display:none;
+   background-color: rgba(255,255,255,0.1);
+}
+
+#div-contatto {
+   display:none;
+   opacity:0;
+   z-index:1100;
+   width:950px;
+   height:450px;
+   padding:20px;
+   padding-top:0px;
+   position:absolute;
+   left:150px;
+   top:80px;
+   text-align:left;
+   background:  rgba(206,210,218,0.9);
+   -webkit-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   -moz-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+}
+
+
+.email-phone {
+   font-family: 'Montserrat',sans-serif;
+   font-weight:normal;
+   color: rgb(0,62,117);
+   font-size:22px;
+}
+
+.nome-artista {
+   font-family: 'Montserrat',sans-serif;
+   font-weight: bold;
+   color: rgb(0,62,117);
+   font-size:28px;
+}
+.social-link {
+   width:40px;
+   cursor:pointer;
+   transition: transform .5s;
+}
+.social-link:hover {
+    transform:scale(1.1);
+}
+
+.nota {
+   font-family: Tahoma;
+   font-weight:normal;
+   font-size:18px;
+   line-height:120%;
+   font-style:italic;
+   color: rgb(18,90,160);
+   
+}
+</style>
+
+<div class="cover-contatto" id="cover-contatto">
+
+   <div id="div-contatto">
+   
+         <div style="width:100%;height:40px;">
+         <button type="button" class="close" ng-click="ctrl.hideContatto()">&times;</button>
+         </div>
+
+         <div style="float:left;border:8px solid rgba(255,255,255,0.6);width:55%">
+            <img style="width:100%" src="images/massimo.jpg">
+         </div>
+         
+         <div id="dati-contatto"
+               style="
+                     width:43%;
+                     height:379px;
+                     float:right;
+                     background-color: rgba(255,255,255,0.65);
+                     padding:0px;
+                     padding-top:20px;">
+               <label class="nome-artista">Massimo&nbsp;Necci</label>
+               <p>
+               <p><label class="email-phone">Rome, Italy</label><br>
+               
+               <table>
+               <tr><td nowrap>
+                  <img src="images/cellular.png" style="width:28px"><label class="email-phone">&nbsp;+39 393 382 9469</label></td></tr>
+               <tr><td nowrap>
+                  <img src="images/email.png" style="width:28px"><label class="email-phone">&nbsp;mamosh1960@hotmail.com</label></td></tr>
+                  
+               <tr>
+               <td nowrap style="padding-top:20px;">
+               <img src="images/linkedin.png" title='linkedin' class='social-link' onclick="window.open('https://it.linkedin.com/in/massimo-necci-081453161')">
+               <img src="images/facebook.png" title='facebook' class='social-link' onclick="window.open('https://www.facebook.com/people/Massimo-Necci/1532737923')">
+               </td>
+               </tr>
+               </table>
+               <br>
+               <div style="width:95%;padding:10px;background-color:rgb(216,214,220,0.5);
+               border-left:4px solid rgb(230,170,0);
+               border-right:4px solid rgb(230,170,0);
+               ">
+               
+               <p><label class="nota">L'artista esegue ritratti su commissione</label></p>
+               <p><label class="nota">The artist paints portraits on commission</label></p>
+               </div>
+ 
+         </div> 
+   </div>
+   
+</div>
+   

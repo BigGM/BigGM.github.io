@@ -1,48 +1,450 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!doctype html>
 
 <html>
+
 <head>
-  <title>Index of /web-ftp/web-put/upload</title>
+<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+<meta content='utf-8' http-equiv='encoding'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<style type="text/css">
+<link rel="icon" href="/favicon.ico" />
 
 
-#box {
-   -webkit-box-shadow: 0px 0px 20px 8px rgb(180,180,180);    /* google chrome */
-   -moz-box-shadow: 0px 0px 20px 8px rgb(180,180,180);       /* firefox */
-    box-shadow: 0px 0px 20px 8px rgb(180,180,180);           /* google chrome CSS3 */
-   -moz-border-radius: 6px;
-   border-radius: 6px;
+<link rel="stylesheet" href="css/lib/bootstrap-3.3.6-dist/css/bootstrap.css">
+<link rel="stylesheet" href="css/my-style.css">
+<!--
+<link rel="stylesheet" href="css/neuro-app.css"> -->
 
-   /* Place any other shared CSS properties here, except for those in the next rule */
-   margin: 20px auto;
+<!--
+<link rel="stylesheet" href="css/image-zoom.css" media="screen"> -->
+
+<link href="https://fonts.googleapis.com/css?family=Noticia+Text" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+<script src="js/lib/jquery-1.12.0.min.js"></script>
+<script src="js/lib/jquery-ui-1.11.4.min.js"></script>
+<script src="js/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="js/lib/bootbox.min.js"></script>
+<script src="js/lib/angular-1.4.8.min.js"></script>
+<script src="js/lib/angular-sanitize-1.4.8.min.js"></script>
+<script src='js/jquery.path.js'></script>
+<script src='js/screenfull.js'></script>
+
+<script src='js/jquery.elevatezoom.js'></script>
+
+
+<script>
+window.onload = function() {
+  /*var context = new AudioContext();*/
+  console.log('document ready');
+}
+</script>
+
+
+<style>
+body, html {
+   font-family: Verdana !important;
+   font-size:12px !important;
+   font-weight:normal !important;
+}
+
+html {
+   height: 100%;
+}
+p {
+   line-height:125%;
+}
+
+#div-cornice {
+   position:fixed;
+   overflow:auto;
+   top:0px;
+   left:0px;
+   width:100%;
+   height:100%;
+   background: url('sfondi/sfondo-11.jpg');
    text-align: center;
-   padding: 8 8 8 8;
-}   
+   z-index:100;
+}
 
-body.ie6 #box,
-body.ie7 #box,
-body.ie8 #box {
-   zoom: 1;
-   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=15, Direction=0),
-           progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=15, Direction=90),
-           progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=15, Direction=180),
-           progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=15, Direction=270);
+#outer-div {
+   position:relative;
+   overflow:hidden;
+   display: inline-block;
+   top:15px;
+   left:0px;
+   width: 1300px;
+   height:740px;
+   background: linear-gradient( rgb(90,0,0), rgb(160,20,40) );
+
+   -webkit-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
+   -moz-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
+   box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
+}
+
+#div-menu {
+   z-index:600;
+   position:absolute;
+   width:200px;
+   top:-45px;
+   /*left:500px;*/
+   margin:0px;
+   padding:4px 6px;
+   background-color:rgba(255,255,255,0.3);
+}
+
+.container-prima-pagina {
+   display: inline-flex;
+   position:absolute;
+   bottom:0px;
+   left:0px;
+   z-index:500;
+   padding:10px;
+}
+
+.container-altre-pagine {
+   position:absolute;
+   top:60px;
+   z-index:500;
+   column-count: 4;
+   column-gap: 10px;
+   padding:20px;
+   padding-top:0px;
+}
+
+.quadro-anim {
+   position:absolute;
+   width:0;
+   height:0;
+   opacity:0;
+   margin:0;
+   padding:0;
+   overflow:hidden;
+   -webkit-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.8);
+}
+
+.quadro {
+   display:none;
+   opacity:0;
+   height:280px;
+   margin:0px;
+   padding:0px;
+   overflow:hidden;
+   transition: transform .7s;
+   z-index:500;
+   margin:0px 6px;
+   -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+}
+
+.quadro2 {
+   opacity:1;
+   margin:0px;
+   padding:0px;
+   transition: transform .7s;
+   /*border: 3px solid rgba(200,40,60);*/
+   display: inline-block;
+   margin-bottom:3px;
+   width: 100%;
+   overflow:hidden;
+   -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+}
+
+#autoritratto {
+   position:absolute;
+   display:none;
+   opacity:0;
+   z-index:400;
+   width:300px;
+   height:450px;
+   overflow:hidden;
+   top:-450px;
+   left:500px;
+   -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+}
+
+.anim-shadow {
+   /* shadow temporanea durante l'animazione delle miniature 
+   -webkit-box-shadow: 0px 0px 26px 0px rgba(0,0,0,1);
+   -moz-box-shadow: 0px 0px 26px 0px rgba(0,0,0,1);
+   box-shadow: 0px 0px 26px 0px rgba(0,0,0,1); */
+}
+
+.img-quadro {
+  width: 100% !important;
+  height: auto !important;
+}
+.img-quadro2 {
+   transition: transform .7s;
+   cursor:pointer;
+}
+.img-quadro2:hover {
+   transform:scale(1.2);
+}
+
+#div-artista {
+   z-index:100;
+   opacity: 0;
+   position:absolute;
+   top:90px;
+   width:100%;
+   text-align:center;
+}
+#label-artista {
+   color: white;
+   font-family: 'Cormorant Garamond', serif, Arial, Verdana, Tahoma, Calibri;
+   font-size: 9vw;
+   font-weight: normal;
+   text-shadow: 0 0 9px #000000;
+}
+
+.filterQuadri {
+    -webkit-filter: grayscale(100%) contrast(120%);
+    filter: grayscale(100%) contrast(120%);
+}
+
+.filter-sfondo {
+    -webkit-filter: grayscale(100%) contrast(120%) blur(0.3rem);
+    filter: grayscale(100%) contrast(120%) blur(0.3rem);
+}
+
+
+.tooltip > .tooltip-inner {
+   background-color: rgba(100,200,0,0.9);
+   color: white;
+   /*border: 1px solid rgba(200,0,0,0.8);*/
+   padding: 10px;
+   font-size: 16px;
+}
+/* Tooltip on bottom */
+.tooltip.bottom > .tooltip-arrow {
+   border-bottom: 6px solid rgba(100,200,0,0.9);
+}
+
+.label-info2 {
+   font-family:Calibri;
+   font-size:16px;
+   font-weight:normal;
+   color:white;
+}
+
+.title-quadro {
+   font-family: 'Montserrat',sans-serif;
+   font-weight:normal;
+   color: white;
+   font-size:30px;
+}
+
+.blur-outer-div {
+   filter: blur(0.17rem);
 }
 
 </style>
-
 </head>
 
-<body>
+<body ng-app="maxApp" ng-controller="maxAppController as ctrl" >
 
-<div id="box" style="width:200px">
-  This is an example of a box with a blurred box-shadow.<br>
-  It uses a special CSS recipe in order for it to work in<br>
-  Internet Explorer 6-8 involving a container HTML element<br><>
-  and the Blur Visual Filter.<br>
+<!-- iframe per avvirare il background musicale in automatico -->
+<iframe id="sound-iframe" style="display:none" src="background_audio.html"></iframe>
+
+<!-- il div con il nome dell'artista -->
+<div id="div-artista">
+   <label id="label-artista">Massimo&nbsp;NECCI</span></label>
 </div>
 
-</body> 
 
-</html>
+<div id="div-cornice" >
+<div id="outer-div" style="text-align:center;">
+
+   <!-- sfondo collage  -->
+   <div style="z-index:0;position:absolute;top:0px;left:px;overflow:hidden;">
+   <img style="width:100%" src="sfondi/collage.jpg"  class="filter-sfondo" id="img-sfondo"/>
+   </div>
+
+   
+   <!-- menu  -->
+   <div id="div-menu">
+   
+      <span class="glyphicon glyphicon-triangle-right" style="font-size:24px;float:right;color:rgba(255,255,255,0.4);cursor:pointer"
+            onclick="nextPage()"></span>
+
+      <span class="glyphicon glyphicon-triangle-left" style="font-size:24px;float:left;color:rgba(255,255,255,0.4);cursor:pointer"
+            onclick="previousPage()"></span>
+   
+      <img id="img-contatto" src="images/contact-icon.png" style="height:28px;cursor:pointer" 
+         data-toggle="tooltip"
+         data-placement="bottom"
+         title="Info&nbsp;di&nbsp;contatto / Contact&nbsp;Info"
+         ng-click="ctrl.showContatto()">&nbsp;
+      
+      <img id="img-genesi-quadro" src="images/canvas.png" style="height:28px;cursor:pointer"
+         data-toggle="tooltip"
+         data-placement="bottom"
+         title="Genesi&nbsp;di&nbsp;un&nbsp;dipinto / Birth of a painting"
+         ng-click="ctrl.showGenesi()">
+         
+      <img id="img-ritratto" src="images/raffaello-maddalena-doni.png" style="height:28px;cursor:pointer"
+         data-toggle="tooltip"
+         data-placement="bottom"
+         title="Ritratti / Portraits"
+         ng-click="ctrl.showRitratti()">
+         
+      <img id="img-replica" src="images/replica.png" style="height:28px;cursor:pointer"
+         data-toggle="tooltip"
+         data-placement="bottom"
+         title="Riproduzioni / Copies"
+         ng-click="ctrl.showCopie()">
+
+   </div>
+   <!-- menu -->
+
+
+   <!-- div con l'info sul pezzo musicale in esecuzione -->
+   <div id="div-info-music" style="z-index:600;position:absolute;top:-40px;left:370px;width:600px;background-color:rgba(20,30,40,0.8);height:30px;">
+      <label class="label-info2">Ravel - Noctuelles (Miroir) - Sviatoslav RICHTER</label>
+   </div>
+
+   
+   <!-- div con l'info sul web master -->
+   <div id="div-web-master" style="z-index:600;position:absolute;bottom:-50px;left:370px;width:600px;background-color:rgba(20,30,40,0.8);height:50px;padding-top:4px;">
+   <button type="button" class="close" style="position:relative;top:-10px;font-size:15px;padding:2px;" onclick="closeWebMasterInfo()">&times;</button>
+      <label class="label-info2">Web Master: Giuseppe Mastrantonio (+39 331 450 7445)</label>
+      <p style="line-height:90%;"><label class="label-info2">giuseppe.mastrantonio.66@gmail.com</label></p>
+   </div>
+
+   
+   <!-- Il div con la label per avviare il caricamento della home page con le miniature -->
+   <div id="btn-start" style="z-index:1000;position:absolute;top:100px;left:400px;width:500px;height:90px;border:1px solid rgb(255,255,255);background-color:rgba(255,255,255,0.18);border-radius:20%;">
+   <label style="margin-top:10px;font-family: 'Great Vibes', cursive;font-size:60px;font-weight:normal;color:white;cursor:pointer;"
+         onclick="startAnimation()">Click to Enter</label>
+   </div>
+   
+   
+   <!-- I div delle miniature animate -->
+   <div ng-repeat="q in ctrl.lista_quadri">
+   <div id="anim-{{q.id_div}}" class="quadro-anim">
+      <img style="width:100%" ng-src="quadri/ridimensionati/mini/{{q.nome}}">
+   </div>
+   </div>
+   
+
+   <!-- Prima pagina dei quadri nella home page -->
+   <div id="pagina-1" class="container-prima-pagina">
+   
+      <div id="autoritratto">
+         <img class="img-quadro img-quadro2" ng-src="quadri/ridimensionati/mini/quadro-7.jpg"
+         ng-click="ctrl.showQuadro(ctrl.lista_quadri[0])">
+      </div>
+   
+      <div ng-repeat="q in ctrl.listaQuadri(1)">
+      <div id="{{q.id_div}}" class="quadro">
+         <img id="{{q.id_div}}-img" class="img-quadro" ng-src="quadri/ridimensionati/mini/{{q.nome}}"
+         ng-click="ctrl.showQuadro(q)">
+      </div>
+      </div>
+   </div>
+   
+   
+   <!-- Pagine successive -->
+   <div ng-repeat="p in [2,3,4]">
+      <div id="pagina-{{p}}" class="container-altre-pagine" style="display:none;opacity:0">
+          <div ng-repeat="q in ctrl.listaQuadri( p )">
+             <div id="{{q.id_div}}" class="quadro2"  >
+                <img id="{{q.id_div}}-img" class="img-quadro" src="quadri/ridimensionati/mini/{{q.nome}}"
+                ng-click="ctrl.showQuadro(q)">
+             </div>
+          </div>
+      </div>
+   </div>
+
+   
+   <!-- il div per visualizzare un quadro in primo piano -->
+   <div id="cover-view-quadro" style="position:absolute;width:100%;height:100%;z-index:2000;display:none;opacity:0;margin:0;padding:0;background-color:rgba(20,30,50,0.3)">
+      <div id="div-view-quadro"
+            style="width:1000px;
+               height:700px;
+               padding:25px;
+               padding-top:0px;
+               position:absolute;
+               left:20px;
+               top:20px;
+               background: url('sfondi/sfondo-2.1.png');
+               -webkit-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.7);
+               -moz-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.7);
+               box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.7);">
+
+            <div style="width:100%;height:100%;">
+            
+               <div style="width:100%;height:45px">
+                  <label class="title-quadro">{{ctrl.currentTitolo}}</label>
+                  <button type="button" class="close" ng-click="ctrl.hideQuadro();">&times;</button>
+               </div>
+               
+               <div>
+               <img style="float:left;border:8px solid rgba(255,255,255,0.3)"
+                  src="{{ctrl.currentQuadro}}" id="view-quadro" >
+               </div>
+               
+               <!-- il div per la scheda del quadro -->
+               <div id="div-scheda-quadro"
+                  style="float:right;
+                        background-color:rgba(255,255,255,0.3);
+                        color:white;
+                        padding:10px;
+                        padding-top:20px;
+                        width:200px;
+                        height:300px;
+                        margin-top:-10px;   /* per effetto animazione */
+                        opacity:0;">
+                  <!--
+                  <label style="font-weight:normal;font-size:20px;">
+                  <b>Sfumature di bianco (2012)</b><br>
+                  Olio su tavola<br>
+                  100x75 cm
+                  </label> -->
+               </div>
+               <!-- il div per la scheda del quadro-->
+            </div>
+      </div>
+   </div> <!-- div visualizzazione quadro in primo piano -->
+   
+   <div ng-include="'contatto.html'"></div>
+   <div ng-include="'genesi_quadro.html'"></div>
+   <div ng-include="'ritratti.html'"></div>
+   <div ng-include="'copie.html'"></div>
+
+</div>
+</div>
+
+<!-- Inserisce il codice javascript e angularjs -->
+<script src="js/index.js"></script>
+<script src="js/data-quadri.js"></script>
+<script src="js/max-app.js"></script>
+
+
+<script>
+$(document).ready(function() {
+});
+
+
+$('#img-contatto').tooltip();
+$('#img-genesi-quadro').tooltip();
+$('#img-ritratto').tooltip();
+$('#img-replica').tooltip();
+
+</script>
+
+</BODY>
+</HTML>

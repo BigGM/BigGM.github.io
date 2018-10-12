@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>jQuery elevateZoom Demo</title>
+	
+   <script src="../js/lib/jquery-1.12.0.min.js"></script>
+	<script src='../js/jquery.elevatezoom.js'></script>
+</head>
+
+<body>
+<h1>Basic Zoom Example</h1>
+
+<img id="zoom_01" src='file:///F:/sito-massimo/quadri/ridimensionati/mini/DSC_0094.png' 
+data-zoom-image="file:///F:/sito-massimo/quadri/ridimensionati/DSC_0094.jpg" />
+
+<div id="demo-container" style="position:fixed;top:50px;left:500px;"></div>
+
+
+<br />
+see more examples online <a href="http://www.elevateweb.co.uk/image-zoom/examples">http://www.elevateweb.co.uk/image-zoom/examples</a>
+
+<script>
+/**/
+   $('#zoom_01').elevateZoom({
+      zoomType: "inner",
+      cursor: "crosshair",
+      zoomWindowFadeIn: 500,
+      zoomWindowFadeOut: 750
+   });/**/
+
+   /**
+$("#zoom_01").elevateZoom({
+   zoomWindowPosition: "demo-container",
+   zoomWindowHeight: 700,
+   zoomWindowWidth:500,
+   borderSize: 8,
+   borderColour: 'rgb(0,0,0,0.4)',
+});**/
+</script>
+</body>
+</html>

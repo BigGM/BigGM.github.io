@@ -1,0 +1,73 @@
+<style>
+
+.cover {
+   position:absolute;
+   width:100%;
+   height:100%;
+   z-index:1000;
+   display:none;
+   background-color: rgba(255,255,255,0.1);
+}
+
+#slideshow {
+   position:relative;
+   display:none;
+   opacity:1;
+   width:1200px;
+   height:680px;
+   padding:0px; /*25px;*/
+   top:20px;
+   margin:auto;
+   /*background:  url('sfondi/sfondo-2.1.png');*/
+   background:  rgba(255,255,255,0.93);
+   -webkit-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   -moz-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+}
+
+.title-genesi {
+   font-family: 'Montserrat',sans-serif;
+   font-weight:normal;
+   color: white;
+   font-size:30px;
+}
+
+.slide-container {
+   width:1150px;
+   height:620px;
+   overflow-x:scroll;
+   overflow-y:hidden;
+   display:inline-flex;
+}
+
+.item {
+   margin:8px;
+}
+
+.item-img {
+   max-width:540px;
+   max-height:590px;
+   -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+   -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+}
+
+</style>
+
+<div class="cover" id="cover-genesi">
+
+<div id="slideshow">
+      
+      <div style="height:50px;width:100%;background-color:rgb(208,15,60)">
+         <label class="title-genesi">Nascita di un dipinto / Genesis of a painting</label>
+         <button type="button" class="close" style="margin:5px" ng-click="ctrl.hideGenesi()">&times;</button>
+      </div>
+
+      <div class="slide-container" > 
+         <div class="item" ng-repeat="slide in ctrl.slides">
+            <img src="{{slide}}" class="item-img">
+         </div>
+      </div>
+</div>
+</div>
+   

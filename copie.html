@@ -1,0 +1,100 @@
+<style>
+
+#cover-copie {
+   position:absolute;
+   width:100%;
+   height:100%;
+   z-index:1000;
+   display:none;
+   background-color: rgba(255,255,255,0.1);
+}
+
+#copie {
+   position:relative;
+   opacity:0;
+   width:1200px;
+   height:680px;
+   padding:0px;
+   top:20px;
+   margin:auto;
+   overflow:hidden;
+   background: rgba(244,246,248,0.9);
+   -webkit-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   -moz-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+}
+
+.title-copie {
+   font-family: 'Montserrat',sans-serif;
+   font-weight:normal;
+   color: white;
+   font-size:30px;
+}
+
+#copie-container {
+   -webkit-column-count: 4;
+   -webkit-column-gap:   10px;
+   -moz-column-count:    4;
+   -moz-column-gap:      10px;
+   column-count:         4;
+   column-gap:           10px;
+   padding: 20px 20px 0px 20px;
+}
+
+.div-copia {
+   position:relative;
+   overflow:hidden;
+   display: inline-block;
+   width: 100%;
+   margin:4px 0px;
+   padding:0;
+   -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
+}
+
+.scheda-copia {
+   opacity:0;
+   position:absolute;
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   padding:10px;
+   padding-top:20px;
+   top:0;
+   left:0;
+   text-align:center;
+}
+
+</style>
+
+<div id="cover-copie">
+
+<div id="copie">
+      
+      <div style="height:50px;width:100%;background-color:rgb(36,123,55)">
+         <label class="title-copie">Riproduzioni / Copies</label>
+         <button type="button" class="close" style="margin:5px" ng-click="ctrl.hideCopie()">&times;</button>
+      </div>
+      
+      <!-- NB. la classe di stile img-quadro2 e' definita in index.html
+         serve per l'animazione all'ingresso del mouse su un ritratto -->
+      <div id="copie-container">
+         <!-- -->
+         <div ng-repeat="q in ctrl.copie">
+            <div id="{{q.id}}" class="div-copia">
+               <img id="img-{{q.id}}"
+                    class="img-quadro2" style="width:100%"
+                    ng-src="quadri/ridimensionati/mini/copie/{{q.nome}}" 
+               >
+               <div id="div-scheda-{{q.id}}" class="scheda-copia" style="width:100%;height:100%"
+                  ng-mouseenter="ctrl.showSchedaCopia(q)"
+                  ng-mouseleave="ctrl.hideSchedaCopia(q)"
+                  ng-click="ctrl.showQuadro(q)"
+               ></div>
+            </div>   
+         </div>
+
+      </div>
+</div>
+</div>
+

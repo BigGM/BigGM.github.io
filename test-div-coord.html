@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html>
+
+<head>
+<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+<meta content='utf-8' http-equiv='encoding'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/lib/bootstrap-3.3.6-dist/css/bootstrap.css">
+<link rel="stylesheet" href="css/my-style.css">
+<link rel="stylesheet" href="css/neuro-app.css">
+
+<link href="https://fonts.googleapis.com/css?family=Noticia+Text" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+<script src="js/lib/jquery-1.12.0.min.js"></script>
+<script src="js/lib/jquery-ui-1.11.4.min.js"></script>
+<script src="js/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="js/lib/bootbox.min.js"></script>
+<script src="js/lib/angular-1.4.8.min.js"></script>
+<script src="js/lib/angular-sanitize-1.4.8.min.js"></script>
+<script src='https://cdn.rawgit.com/weepy/jquery.path/master/jquery.path.js'></script>
+
+<style>
+#outer-div {
+   position:fixed;
+   top:40px;
+   left:100px;
+   width:500px;
+   height:500px;
+   border: 2px solid red;
+}
+
+.inner-div {
+   position:absolute;
+   width:50px;
+   height:50px;
+   top:20px;
+   left:20px;
+   border: 2px solid blue;
+}
+</style>
+
+</head>
+
+<body>
+<div id="outer-div">
+<div class="inner-div" id="div-1"></div>
+<div class="inner-div" id="div-2"></div>
+<div class="inner-div" id="div-3"></div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+   $('#div-1').css({top:0,left:0}).animate({top:'50px',left:'50px'},1600);
+   $('#div-2').css({top:300,left:200}).animate({top:'50px',left:'50px'},1600);
+   $('#div-3').css({top:400,left:0}).animate({top:'50px',left:'50px'},1600);
+});
+</script>
+</body>
+
+</HTML>

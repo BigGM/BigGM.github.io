@@ -1,0 +1,91 @@
+<style>
+
+#cover-ritratti {
+   position:absolute;
+   width:100%;
+   height:100%;
+   z-index:1000;
+   display:none;
+   background-color: rgba(255,255,255,0.1);
+}
+
+#ritratti {
+   position:relative;
+   opacity:0;
+   width:1200px;
+   height:680px;
+   padding:0px;
+   top:20px;
+   margin:auto;
+   background: rgb(244,246,248,0.9);
+   -webkit-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   -moz-box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+   box-shadow: 0px 9px 20px 1px rgba(20,20,20,0.5);
+}
+
+.title-ritratto {
+   font-family: 'Montserrat',sans-serif;
+   font-weight:normal;
+   color: white;
+   font-size:30px;
+}
+
+#pics-container {
+  display:inline-flex;
+}
+
+.scheda-ritratto {
+   opacity:0;
+   position:absolute;
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   padding:10px;
+   padding-top:20px;
+   top:0;
+   left:0;
+   text-align:center;
+}
+
+.ritratto {
+   position:relative;
+   width:280px;
+   overflow:hidden;
+   margin:0px 6px;
+   padding:0;
+   -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+   -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
+}
+
+</style>
+
+<div id="cover-ritratti">
+
+<div id="ritratti">
+      
+      <div style="height:50px;width:100%;background-color:rgb(78,109,135)">
+         <label class="title-ritratto">Ritratti / Portraits</label>
+         <button type="button" class="close" style="margin:5px" ng-click="ctrl.hideRitratti()">&times;</button>
+      </div>
+      
+      <!-- NB. la classe di stile img-quadro2 e' definita in index.html
+         serve per l'animazione all'ingresso del mouse su un ritratto -->
+      <div id="pics-container">
+      
+         <div ng-repeat="q in ctrl.ritratti">
+            <div id="{{q.id}}" class="ritratto" style="top:{{q.top_pos}}">
+               <img id="img-{{q.id}}"
+                    class="img-quadro2" style="width:100%"
+                    ng-src="quadri/ridimensionati/mini/{{q.nome}}" 
+               >
+               <div id="div-scheda-{{q.id}}" class="scheda-ritratto" style="width:100%;height:100%"
+                  ng-mouseenter="ctrl.showSchedaRitratto(q)"
+                  ng-mouseleave="ctrl.hideSchedaRitratto(q)"
+                  ng-click="ctrl.showQuadro(q)"
+               ></div>
+            </div>   
+         </div>
+      </div>
+</div>
+</div>
+
