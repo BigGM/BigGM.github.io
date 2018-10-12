@@ -86,6 +86,8 @@
             return;
          }
          
+         $('#waitDiv').show();
+         
          var img = new Image();
          img.src = this_quadro.quadro;
         
@@ -96,6 +98,8 @@
          //console.log(this.currentQuadro)
          
          img.onload = function() {
+            $('#waitDiv').hide();
+         
             var img_width  = this.width;
             var img_height = this.height;
             var r = img_height / img_width;

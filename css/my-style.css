@@ -321,7 +321,7 @@ button.close2 {
     background-color: rgba(250,250,250,0.8);
 }
 #waitImage {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     margin-left: -36px; /* half width of the gif */
