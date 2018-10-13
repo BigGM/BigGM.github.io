@@ -310,7 +310,7 @@ button.close2 {
 }
 
 #waitDiv {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width:100%;
@@ -318,18 +318,22 @@ button.close2 {
     z-index:52345;
     overflow: hidden;
     /*border: 2px solid rgb(250,250,250);*/
-    background-color: rgba(250,250,250,0.8);
+    background-color: rgba(250,250,250,0.0);
+    text-align:center;
 }
 #waitImage {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -36px; /* half width of the gif */
-    margin-top: -36px;  /* half height of the gif */
+    width:128px;
+    top: 30%;
+    left: 586px;
+    /*padding:10px 586px;*/
+    padding:20px;
     z-index:12345;
     overflow: hidden;
-    /*background-color: white;*/
-    border-radius:6px;
+    background-color: rgba(255,255,255,0.3);
+    /*border-radius:0px;*/
+    border-radius:50%;
+    border: 1px solid rgba(255,255,255,0.8);
     
     /*-webkit-box-shadow: 0 0px 9px rgba(0, 0, 0,.5);
           box-shadow: 0 0px 9px rgba(0, 0, 0, .5);*/

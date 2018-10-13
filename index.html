@@ -80,7 +80,7 @@ p {
    left:0px;
    width: 1300px;
    height:740px;
-   background: linear-gradient( rgb(90,0,0), rgb(160,20,40) );
+   background: linear-gradient( rgb(90,0,0), rgb(160,20,20) );
 
    -webkit-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
    -moz-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
@@ -259,27 +259,27 @@ p {
 <!-- iframe per avvirare il background musicale in automatico -->
 <iframe id="sound-iframe" style="display:none" src="background_audio.html"></iframe>
 
-<!-- il div con il nome dell'artista -->
-<div id="div-artista">
-   <label id="label-artista">Massimo&nbsp;NECCI</span></label>
-</div>
+   <!-- il div con il nome dell'artista -->
+   <div id="div-artista">
+      <label id="label-artista">Massimo&nbsp;NECCI</span></label>
+   </div>
 
 
 <div id="div-cornice" >
 <div id="outer-div" style="text-align:center;">
+
+   <!--- un div con la gif di wait visualizzato nel caricamento di una pagina --->
+   <div id='waitDiv' style="display:none">
+      <img id='waitImage' src='./images/loader.gif' alt='Loading'/>
+   </div>
+
 
    <!-- sfondo collage  -->
    <div style="z-index:0;position:absolute;top:0px;left:px;overflow:hidden;">
    <img style="width:100%" src="sfondi/collage.jpg"  class="filter-sfondo" id="img-sfondo"/>
    </div>
    
-   <!--- Il div con la gif di wait visualizzato nel caricamento di una pagina --->
-   <div id='waitDiv' style='display:none;z-index:2000'>
-      <img id='waitImage' src='./images/wait_spinner.gif' alt='Loading'/>
-   </div>
 
-
-   
    <!-- menu  -->
    <div id="div-menu">
    
@@ -430,6 +430,7 @@ p {
    <div ng-include="'genesi_quadro.html'"></div>
    <div ng-include="'ritratti.html'"></div>
    <div ng-include="'copie.html'"></div>
+
 
 </div>
 </div>

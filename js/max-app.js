@@ -25,8 +25,7 @@
       this.ritratti     = angular.copy(ritratti);
       this.copie        = angular.copy(copie);
       this.quadri = [];
-      
-      
+     
       this.calcWidth = function(quadro) {
          return quadro.hend_img * (quadro.w_img/quadro.h_img) + quadro.width_corr;
       }
@@ -98,6 +97,7 @@
          //console.log(this.currentQuadro)
          
          img.onload = function() {
+            
             $('#waitDiv').hide();
          
             var img_width  = this.width;

@@ -287,8 +287,8 @@ var ritratti = [
       id      : 'ritratto-7',
       nome    : "quadro-7.jpg",
       quadro  : "quadri/ridimensionati/DSC_0126luce.jpg",
-      scheda  : "<p><b>Scheda ritratto-7</b></p>",
-      titolo  : "Titolo",
+      scheda  : "<p><b>Autoritratto in rosso</b></p>Olio su tela</p></p>96x47 cm</p>",
+      titolo  : "Autoritratto in rosso",
       top_pos : "25px"
    },
    {
