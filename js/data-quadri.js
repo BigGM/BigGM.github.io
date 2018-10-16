@@ -15,16 +15,17 @@ var data_quadri = [
    scheda     : "<p><b>Autoritratto in rosso</b></p>Olio su tela</p></p>96x47 cm</p>",
    titolo     : "Autoritratto in rosso"
 },
+
 {
-   id_div     : 'quadro-1', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-1.jpg",  // nome del file, solo per eventuale log
-   w_img      : 439,         // larghezza dell'immagine
-   h_img      : 286,         // altezza immagine
-   zoom       : 1.3,         // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-1.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   id_div     : 'quadro-17', // id del div  che contiene l'immagine
+   pagina     : 1,          // numero di pagina su cui appare questo quadro,
+   nome       : "quadro-17.jpg",  // nome del file, solo per eventuale log
+   w_img      : 362,         // larghezza dell'immagine
+   h_img      : 492,         // altezza immagine
+   zoom       : 0.9,          // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-17.jpg",
+   scheda     : "<p><b>Il vaso azzurro</b></p>Olio su tela</p></p>80x60 cm</p>",
+   titolo     : "Il vaso azzurro"
 },
 {
    id_div     : 'quadro-2', // id del div  che contiene l'immagine
@@ -34,8 +35,32 @@ var data_quadri = [
    h_img      : 479,         // altezza immagine
    zoom       : 0.9,         // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-2.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Gatto</b></p>Olio su tela</p></p>40x30cm</p>",
+   titolo     : "Gatto"
+},
+
+{
+   id_div     : 'quadro-18', // id del div  che contiene l'immagine
+   pagina     : 1,          // numero di pagina su cui appare questo quadro,
+   nome       : "quadro-18.jpg",  // nome del file, solo per eventuale log
+   w_img      : 313,         // larghezza dell'immagine
+   h_img      : 410,         // altezza immagine
+   zoom       : 1.0,          // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-18.jpg",
+   scheda     : "<p><b>Danza in bianco</b></p>Olio su tavola</p></p>100x75 cm</p>",
+   titolo     : "Danza in bianco"
+},
+
+{
+   id_div     : 'quadro-12', // id del div  che contiene l'immagine
+   pagina     : 1,          // numero di pagina su cui appare questo quadro,
+   nome       : "quadro-12.jpg",  // nome del file, solo per eventuale log
+   w_img      : 342,         // larghezza dell'immagine
+   h_img      : 461,         // altezza immagine
+   zoom       : 1.0,          // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-12.jpg",
+   scheda     : "<p><b>Papaveri</b></p><p>Olio su tela</p><p>80x60 cm</p>",
+   titolo     : "Papaveri"
 },
 {
    id_div     : 'quadro-3', // id del div  che contiene l'immagine
@@ -48,7 +73,6 @@ var data_quadri = [
    scheda     : "<p><b>Scheda</b></p>",
    titolo     : "Titolo"
 },
-
 {
    id_div     : 'quadro-4', // id del div  che contiene l'immagine
    pagina     : 3,          // numero di pagina su cui appare questo quadro,
@@ -57,8 +81,8 @@ var data_quadri = [
    h_img      : 480,         // altezza immagine
    zoom       : 1.0,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-4.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>La sedia</b></p>Olio su tela</p></p>60x50 cm</p>",
+   titolo     : "La sedia"
 },
 {
    id_div     : 'quadro-5', // id del div  che contiene l'immagine
@@ -82,7 +106,6 @@ var data_quadri = [
    scheda     : "<p><b>Scheda</b></p>",
    titolo     : "Titolo"
 },
-
 {
    id_div     : 'quadro-8', // id del div  che contiene l'immagine
    pagina     : 2,          // numero di pagina su cui appare questo quadro,
@@ -91,7 +114,7 @@ var data_quadri = [
    h_img      : 300,         // altezza immagine
    zoom       : 1.2,          // fattore di zooom
    quadro     : "quadri/ridimensionati/DSC_0122.jpg",
-   scheda     : "<p><b>Chicago</b></p>Tecnica mista, smalto pi&ugrave olio su tela e carta</p></p>80x60 cm</p>",
+   scheda     : "<p><b>Chicago</b></p>Tecnica mista, smalto pi&ugrave olio su tela e carta stropicciata</p></p>80x60 cm</p>",
    titolo     : "Chicago"
 },
 {
@@ -102,8 +125,8 @@ var data_quadri = [
    h_img      : 458,         // altezza immagine
    zoom       : 0.8,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-9.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Foglie</b></p>Olio su tela</p></p>50x30 cm</p>",
+   titolo     : "Foglie"
 },
 {
    id_div     : 'quadro-10', // id del div  che contiene l'immagine
@@ -114,8 +137,8 @@ var data_quadri = [
    start_delay : 600,         // attesa iniziale prima dell'animazione
    zoom       : 1.0,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-10.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p>",
+   titolo     : "Vaso con fiori e insetti"
 },
 {
    id_div     : 'quadro-11', // id del div  che contiene l'immagine
@@ -128,16 +151,17 @@ var data_quadri = [
    scheda     : "<p><b>Omaggio a Igor Levashov</b></p><p>Olio su tela</p><p>70x60 cm</p>",
    titolo     : "Omaggio a Igor Levashov"
 },
+
 {
-   id_div     : 'quadro-12', // id del div  che contiene l'immagine
-   pagina     : 1,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-12.jpg",  // nome del file, solo per eventuale log
-   w_img      : 342,         // larghezza dell'immagine
-   h_img      : 461,         // altezza immagine
-   zoom       : 1.0,          // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-12.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   id_div     : 'quadro-1', // id del div  che contiene l'immagine
+   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   nome       : "quadro-1.jpg",  // nome del file, solo per eventuale log
+   w_img      : 439,         // larghezza dell'immagine
+   h_img      : 286,         // altezza immagine
+   zoom       : 1.3,         // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-1.jpg",
+   scheda     : "<p><b>Nudo sdraiato</b></p>Tecnica mista, matita e olio su cartoncino</p></p>75x50 cm</p>",
+   titolo     : "Nudo sdraiato"
 },
 {
    id_div     : 'quadro-13', // id del div  che contiene l'immagine
@@ -158,8 +182,8 @@ var data_quadri = [
    h_img      : 338,         // altezza immagine
    zoom       : 1.2,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-14.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Omaggio a Natalie Picoulet</b></p><p>Olio su tela</p><p>50x40 cm</p>",
+   titolo     : "Omaggio a Natalie Picoulet"
 },
 {
    id_div     : 'quadro-15', // id del div  che contiene l'immagine
@@ -180,31 +204,10 @@ var data_quadri = [
    h_img      : 239,         // altezza immagine
    zoom       : 1.3,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-16.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Danza in rosa</b></p>Olio su tela</p></p>90x50 cm</p>",
+   titolo     : "Danza in rosa"
 },
-{
-   id_div     : 'quadro-17', // id del div  che contiene l'immagine
-   pagina     : 1,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-17.jpg",  // nome del file, solo per eventuale log
-   w_img      : 362,         // larghezza dell'immagine
-   h_img      : 492,         // altezza immagine
-   zoom       : 0.9,          // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-17.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
-},
-{
-   id_div     : 'quadro-18', // id del div  che contiene l'immagine
-   pagina     : 1,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-18.jpg",  // nome del file, solo per eventuale log
-   w_img      : 313,         // larghezza dell'immagine
-   h_img      : 410,         // altezza immagine
-   zoom       : 1.0,          // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-18.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
-},
+
 {
    id_div     : 'quadro-19', // id del div  che contiene l'immagine
    pagina     : 3,          // numero di pagina su cui appare questo quadro,
@@ -213,8 +216,8 @@ var data_quadri = [
    h_img      : 380,         // altezza immagine
    zoom       : 1.3,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-19.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   scheda     : "<p><b>Natura morta con pappagalli</b></p>Olio su tela</p></p>80x60 cm</p>",
+   titolo     : "Natura morta con pappagalli"
 },
 {
    id_div     : 'quadro-20', // id del div  che contiene l'immagine
@@ -224,7 +227,7 @@ var data_quadri = [
    h_img      : 320,         // altezza immagine
    zoom       : 1.3,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-20.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
+   scheda     : "<p><b>Scheda</p>",
    titolo     : "Titolo"
 },
 {
@@ -295,32 +298,31 @@ var ritratti = [
       id      : 'ritratto-2',
       nome    : "quadro-2.jpg",
       quadro  : "quadri/ridimensionati/quadro-2.jpg",
-      scheda  : "<p><b>Scheda ritratto-2</b></p>",
-      titolo  : "Titolo",
+      scheda  : "<p><b>Gatto</b></p>Olio su tela</p></p>40x30cm</p>",
+      titolo  : "Gatto",
       top_pos : "130px"
    }
 ]
 
 var copie = [
    {
-      id      : 'copia-20',       // id del div che contiene il file immagine
-      nome    : "quadro-20.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
-      quadro  : "quadri/ridimensionati/quadro-20.jpg",
-      scheda  : "<p><b>Scheda</b></p>",
-      titolo  : "Titolo",
+      id      : 'copia-14',       // id del div che contiene il file immagine
+      nome    : "quadro-14.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
+      quadro  : "quadri/ridimensionati/quadro-14.jpg",
+      scheda  : "<p><b>Omaggio a Natalie Picoulet</b></p><p>Olio su tela</p><p>50x40 cm</p>",
+      titolo  : "Omaggio a Natalie Picoulet"
    },
    {
       id      : 'copia-10',       // id del div che contiene il file immagine
       nome    : "quadro-10.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
       quadro  : "quadri/ridimensionati/quadro-10.jpg",
-      scheda  : "<p><b>Scheda</b></p>",
-      titolo  : "Titolo",
+      scheda  : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p>",
+      titolo  : "Vaso con fiori e insetti"
    },
    {
-      id      : 'copia-11',       // id del div che contiene il file immagine
-      nome    : "quadro-11.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
-      scheda  : "<p><b>Omaggio a Igor Levashov</b></p><p>Olio su tela</p><p>70x60 cm</p>",
-      quadro  : "quadri/ridimensionati/quadro-11.jpg",
+      id      : 'copia-20',       // id del div che contiene il file immagine
+      nome    : "quadro-20.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
+      quadro  : "quadri/ridimensionati/quadro-20.jpg",
       scheda  : "<p><b>Scheda</b></p>",
       titolo  : "Titolo",
    },
@@ -332,11 +334,19 @@ var copie = [
       titolo  : "Cicogna",
    },
    {
+      id      : 'copia-11',       // id del div che contiene il file immagine
+      nome    : "quadro-11.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
+      scheda  : "<p><b>Omaggio a Igor Levashov</b></p><p>Olio su tela</p><p>70x60 cm</p>",
+      quadro  : "quadri/ridimensionati/quadro-11.jpg",
+      scheda  : "<p><b>Omaggio a Igor Levashov</b></p><p>Olio su tela</p><p>70x60 cm</p>",
+      titolo  : "Omaggio a Igor Levashov"
+   },
+   {
       id      : 'copia-5',       // id del div che contiene il file immagine
       nome    : "quadro-5.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
       quadro  : "quadri/ridimensionati/quadro-5.jpg",
-      scheda  : "<p><b>Scheda</b></p>",
-      titolo  : "Titolo",
+      scheda  : "<p><b>Omaggio a Peter Wagemans</b></p>Olio su tela</p></p>50x50 cm</p>",
+      titolo  : "Omaggio a Peter Wagemans"
    },
    {
       id      : 'copia-22',       // id del div che contiene il file immagine
@@ -356,7 +366,8 @@ var copie = [
       id      : 'copia-15',       // id del div che contiene il file immagine
       nome    : "quadro-15.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
       quadro  : "quadri/ridimensionati/quadro-15.jpg",
-      scheda  : "<p><b>Scheda</b></p>",
-      titolo  : "Titolo",
-   },  
+      scheda  : "<p><b>Omaggio a Denis Oktyabr</b></p>Olio su tela</p></p>70x60 cm</p>",
+      titolo  : "Omaggio a Denis Oktyabr"
+   },
+
 ]

@@ -80,7 +80,7 @@ p {
    left:0px;
    width: 1300px;
    height:740px;
-   background: linear-gradient( rgb(90,0,0), rgb(160,20,20) );
+   background: linear-gradient( rgb(160,20,20), rgb(90,0,0) );
 
    -webkit-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
    -moz-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
@@ -100,8 +100,9 @@ p {
 
 .container-prima-pagina {
    display: inline-flex;
+   align-items: flex-end;
    position:absolute;
-   bottom:0px;
+   bottom:10px;
    left:0px;
    z-index:500;
    padding:10px;
@@ -133,7 +134,7 @@ p {
 .quadro {
    display:none;
    opacity:0;
-   height:280px;
+   /*height:280px;*/
    margin:0px;
    padding:0px;
    overflow:hidden;
@@ -143,8 +144,39 @@ p {
    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+    
+   transform:  matrix3d(
+         0.8877290883893966, -0.0023672775690383907, 0, 0.00045156875677785437,
+         0.0, 0.95, 0, 0.0,
+         0, 0, 1, 0,
+         0, 0, 0, 1
+         );
+      
+   -webkit-transform:  matrix3d(
+         0.8877290883893966, -0.0023672775690383907, 0, 0.00045156875677785437,
+         0.0, 0.95, 0, 0.0,
+         0, 0, 1, 0,
+         0, 0, 0, 1
+         );
+         
+   -moz-transform:  matrix3d(
+         0.8877290883893966, -0.0023672775690383907, 0, 0.00045156875677785437,
+         0.0, 0.95, 0, 0.0,
+         0, 0, 1, 0,
+         0, 0, 0, 1
+         );
+         
+   -ms-transform:  matrix3d(
+         0.8877290883893966, -0.0023672775690383907, 0, 0.00045156875677785437,
+         0.0, 0.95, 0, 0.0,
+         0, 0, 1, 0,
+         0, 0, 0, 1
+         );
    
-  
+   
+   -webkit-box-reflect: below 5px 
+    -webkit-gradient(linear, left top, left bottom, from(transparent),
+                     color-stop(0.87, transparent), to(#880000));
 }
 
 .quadro2 {
@@ -160,7 +192,6 @@ p {
    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
-   
 }
 
 #autoritratto {
@@ -171,7 +202,7 @@ p {
    width:300px;
    height:450px;
    overflow:hidden;
-   top:-450px;
+   top:-380px;
    left:500px;
    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
@@ -322,7 +353,7 @@ p {
 
    <!-- div con l'info sul pezzo musicale in esecuzione -->
    <div id="div-info-music" style="z-index:600;position:absolute;top:-40px;left:370px;width:600px;background-color:rgba(20,30,40,0.8);height:30px;">
-      <label class="label-info2">Debussy - Arabesques I - Zoltán KOCSIS</label>
+      <label class="label-info2">Debussy - Arabesque I - Zoltán KOCSIS</label>
    </div>
 
    

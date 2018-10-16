@@ -39,6 +39,7 @@
    column-count:         4;
    column-gap:           10px;
    padding: 20px 20px 0px 20px;
+   overflow:auto;
 }
 
 .div-copia {
@@ -78,22 +79,22 @@
       
       <!-- NB. la classe di stile img-quadro2 e' definita in index.html
          serve per l'animazione all'ingresso del mouse su un ritratto -->
-      <div id="copie-container">
-         <!-- -->
-         <div ng-repeat="q in ctrl.copie">
-            <div id="{{q.id}}" class="div-copia">
-               <img id="img-{{q.id}}"
-                    class="img-quadro2" style="width:100%"
-                    ng-src="quadri/ridimensionati/mini/copie/{{q.nome}}" 
-               >
-               <div id="div-scheda-{{q.id}}" class="scheda-copia" style="width:100%;height:100%"
-                  ng-mouseenter="ctrl.showSchedaCopia(q)"
-                  ng-mouseleave="ctrl.hideSchedaCopia(q)"
-                  ng-click="ctrl.showQuadro(q)"
-               ></div>
-            </div>   
+      <div style="width:100%;height:630px;overflow:auto">
+         <div id="copie-container">
+            <div ng-repeat="q in ctrl.copie">
+               <div id="{{q.id}}" class="div-copia">
+                  <img id="img-{{q.id}}"
+                       class="img-quadro2" style="width:100%"
+                       ng-src="quadri/ridimensionati/mini/copie/{{q.nome}}" 
+                  >
+                  <div id="div-scheda-{{q.id}}" class="scheda-copia" style="width:100%;height:100%"
+                     ng-mouseenter="ctrl.showSchedaCopia(q)"
+                     ng-mouseleave="ctrl.hideSchedaCopia(q)"
+                     ng-click="ctrl.showQuadro(q)"
+                  ></div>
+               </div>   
+            </div>
          </div>
-
       </div>
 </div>
 </div>
