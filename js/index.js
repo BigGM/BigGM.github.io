@@ -198,7 +198,7 @@ function animate_cuadro3(data) {
 
 
 function animate_cuadro(data) {
-  console.log(data)
+  //console.log(data)
   var q = $('#anim-'+data.id_div)
   var w = 270*data.zoom
   var h = w*(data.h_img/data.w_img)
@@ -253,7 +253,7 @@ function startAnimation() {
    let audio = innerDoc.getElementById("audio-sound");
    let start_time = 0
    audio.currentTime = start_time
-   audio.ontimeupdate = function() { playUptoSecond(audio,start_time+32.8) };
+   //audio.ontimeupdate = function() { playUptoSecond(audio,start_time+32.8) };
    audio.play();
   
    /*
