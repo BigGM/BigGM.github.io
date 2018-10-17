@@ -86,7 +86,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-5', // id del div  che contiene l'immagine
-   pagina     : 2,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 1,          // numero di pagina su cui appare questo quadro,
+   pagina     : 2,
    nome       : "quadro-5.jpg",  // nome del file, solo per eventuale log
    w_img      : 366,         // larghezza dell'immagine
    h_img      : 365,         // altezza immagine
@@ -95,17 +96,21 @@ var data_quadri = [
    scheda     : "<p><b>Omaggio a Peter Wagemans</b></p>Olio su tela</p></p>50x50 cm</p>",
    titolo     : "Omaggio a Peter Wagemans"
 },
+
 {
-   id_div     : 'quadro-6', // id del div  che contiene l'immagine
-   pagina     : 2,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-6.jpg",  // nome del file, solo per eventuale log
-   w_img      : 315,         // larghezza dell'immagine
-   h_img      : 377,         // altezza immagine
-   zoom       : 1.0,          // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-6.jpg",
-   scheda     : "<p><b>Scheda</b></p>",
-   titolo     : "Titolo"
+   id_div     : 'quadro-14', // id del div  che contiene l'immagine
+   //pagina     : 3,          // numero di pagina su cui appare questo quadro,
+   pagina :2,
+   nome       : "quadro-14.jpg",  // nome del file, solo per eventuale log
+   w_img      : 438,         // larghezza dell'immagine
+   h_img      : 338,         // altezza immagine
+   zoom       : 1.2,          // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-14.jpg",
+   scheda     : "<p><b>Omaggio a Natalie Picoulet</b></p><p>Olio su tela</p><p>50x40 cm</p>",
+   titolo     : "Omaggio a Natalie Picoulet"
 },
+
+
 {
    id_div     : 'quadro-8', // id del div  che contiene l'immagine
    pagina     : 2,          // numero di pagina su cui appare questo quadro,
@@ -119,7 +124,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-9', // id del div  che contiene l'immagine
-   pagina     : 2,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 2,          // numero di pagina su cui appare questo quadro,
+   pagina : 1,
    nome       : "quadro-9.jpg",  // nome del file, solo per eventuale log
    w_img      : 265,         // larghezza dell'immagine
    h_img      : 458,         // altezza immagine
@@ -154,7 +160,8 @@ var data_quadri = [
 
 {
    id_div     : 'quadro-1', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   pagina : 3,
    nome       : "quadro-1.jpg",  // nome del file, solo per eventuale log
    w_img      : 439,         // larghezza dell'immagine
    h_img      : 286,         // altezza immagine
@@ -171,23 +178,27 @@ var data_quadri = [
    h_img      : 518,         // altezza immagine
    zoom       : 0.9,         // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-13.jpg",
+   scheda     : "<p><b>Leo</b></p>Olio su tela</p></p>80x60 cm</p>",
+   titolo     : "Leo"
+},
+
+{
+   id_div     : 'quadro-6', // id del div  che contiene l'immagine
+   pagina     : 2,          // numero di pagina su cui appare questo quadro,
+   nome       : "quadro-6.jpg",  // nome del file, solo per eventuale log
+   w_img      : 315,         // larghezza dell'immagine
+   h_img      : 377,         // altezza immagine
+   zoom       : 1.0,          // fattore di zooom
+   quadro     : "quadri/ridimensionati/quadro-6.jpg",
    scheda     : "<p><b>Scheda</b></p>",
    titolo     : "Titolo"
 },
-{
-   id_div     : 'quadro-14', // id del div  che contiene l'immagine
-   pagina     : 3,          // numero di pagina su cui appare questo quadro,
-   nome       : "quadro-14.jpg",  // nome del file, solo per eventuale log
-   w_img      : 438,         // larghezza dell'immagine
-   h_img      : 338,         // altezza immagine
-   zoom       : 1.2,          // fattore di zooom
-   quadro     : "quadri/ridimensionati/quadro-14.jpg",
-   scheda     : "<p><b>Omaggio a Natalie Picoulet</b></p><p>Olio su tela</p><p>50x40 cm</p>",
-   titolo     : "Omaggio a Natalie Picoulet"
-},
+
+
 {
    id_div     : 'quadro-15', // id del div  che contiene l'immagine
-   pagina     : 3,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 3,          // numero di pagina su cui appare questo quadro,
+   pagina: 2,
    nome       : "quadro-15.jpg",  // nome del file, solo per eventuale log
    w_img      : 327,         // larghezza dell'immagine
    h_img      : 282,         // altezza immagine
@@ -221,7 +232,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-20', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   pagina : 3,
    nome       : "quadro-20.jpg",  // nome del file, solo per eventuale log
    w_img      : 465,         // larghezza dell'immagine
    h_img      : 320,         // altezza immagine
@@ -232,7 +244,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-21', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   pagina : 2, 
    nome       : "quadro-21.jpg",  // nome del file, solo per eventuale log
    w_img      : 534,         // larghezza dell'immagine
    h_img      : 577,         // altezza immagine
@@ -243,7 +256,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-22', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   pagina : 3,
    nome       : "quadro-22.jpg",  // nome del file, solo per eventuale log
    w_img      : 618,         // larghezza dell'immagine
    h_img      : 460,         // altezza immagine
@@ -254,7 +268,8 @@ var data_quadri = [
 },
 {
    id_div     : 'quadro-23', // id del div  che contiene l'immagine
-   pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   //pagina     : 4,          // numero di pagina su cui appare questo quadro,
+   pagina : 3,
    nome       : "quadro-23.jpg",  // nome del file, solo per eventuale log
    w_img      : 535,         // larghezza dell'immagine
    h_img      : 547,         // altezza immagine
@@ -282,8 +297,8 @@ var ritratti = [
       id      : 'ritratto-13',
       nome    : "quadro-13.jpg",
       quadro  : "quadri/ridimensionati/quadro-13.jpg",
-      scheda  : "<p><b>Scheda ritratto-13</b></p>",
-      titolo  : "Titolo",
+      scheda  : "<p><b>Leo</b></p>Olio su tela</p></p>80x60 cm</p>",
+      titolo  : "Leo",
       top_pos : "60px"
    },
    {

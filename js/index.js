@@ -284,7 +284,7 @@ function playUptoSecond(audio,second) {
 }
 
 var currPage=1;
-var totPages=4;
+var totPages=3;
 var duration = 150;
 function nextPage() {
 
@@ -329,7 +329,7 @@ function previousPage() {
 }
 
 function closeWebMasterInfo() {
-   $('#div-web-master').animate({bottom:'-50px'},1000)
+   $('#div-web-master').animate({bottom:'-50px'},600)
 }
 
 
