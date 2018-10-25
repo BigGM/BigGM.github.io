@@ -283,9 +283,9 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
 .tooltip > .tooltip-inner {
    background-color: rgba(100,200,0,0.9);
    color: white;
-   /*border: 1px solid rgba(200,0,0,0.8);*/
    padding: 10px;
-   font-size: 16px;
+   margin: 0px;
+   font-size: 14px;
 }
 /* Tooltip on bottom */
 .tooltip.bottom > .tooltip-arrow {
@@ -351,31 +351,31 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
       <img id="img-bio" src="images/biography-icon.png" style="height:28px;cursor:pointer" 
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Biografia / Biographical Notes"
+         title="Biografia<br>Biographical Notes"
          ng-click="ctrl.showBiografia()">&nbsp;
       
       <img id="img-contatto" src="images/contact-icon.png" style="height:28px;cursor:pointer" 
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Info&nbsp;di&nbsp;contatto / Contact&nbsp;Info"
+         title="Info&nbsp;di&nbsp;contatto<br>Contact&nbsp;Info"
          ng-click="ctrl.showContatto()">&nbsp;
       
       <img id="img-genesi-quadro" src="images/canvas.png" style="height:28px;cursor:pointer"
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Genesi&nbsp;di&nbsp;un&nbsp;dipinto / Birth of a painting"
+         title="Genesi&nbsp;di&nbsp;un&nbsp;dipinto<br>Birth of a painting"
          ng-click="ctrl.showGenesi()">
          
       <img id="img-ritratto" src="images/raffaello-maddalena-doni.png" style="height:28px;cursor:pointer"
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Ritratti / Portraits"
+         title="Ritratti<br>Portraits"
          ng-click="ctrl.showRitratti()">
          
       <img id="img-replica" src="images/replica.png" style="height:28px;cursor:pointer"
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Riproduzioni / Copies"
+         title="Riproduzioni<br>Copies"
          ng-click="ctrl.showCopie()">
 
    </div>
@@ -512,12 +512,17 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
 $(document).ready(function() {
 });
 
-
+/*
 $('#img-contatto').tooltip();
 $('#img-genesi-quadro').tooltip();
 $('#img-ritratto').tooltip();
 $('#img-replica').tooltip();
 $('#img-bio').tooltip();
+*/
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({html:true});
+});
 
 </script>
 
