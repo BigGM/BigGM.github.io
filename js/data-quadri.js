@@ -143,7 +143,7 @@ var data_quadri = [
    start_delay : 600,         // attesa iniziale prima dell'animazione
    zoom       : 1.0,          // fattore di zooom
    quadro     : "quadri/ridimensionati/quadro-10.jpg",
-   scheda     : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p>",
+   scheda     : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p><p><i>Originale di Jacob van Walscapelle</i></p>",
    titolo     : "Vaso con fiori e insetti"
 },
 {
@@ -331,7 +331,7 @@ var copie = [
       id      : 'copia-10',       // id del div che contiene il file immagine
       nome    : "quadro-10.jpg",     // nome del file immagine sulla dir quadri/ridimensionati/mini/
       quadro  : "quadri/ridimensionati/quadro-10.jpg",
-      scheda  : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p>",
+      scheda  : "<p><b>Vaso con fiori e insetti</b></p>Olio su tela</p></p>70x60 cm</p><p><i>Originale di Jacob van Walscapelle</i></p>",
       titolo  : "Vaso con fiori e insetti"
    },
    {

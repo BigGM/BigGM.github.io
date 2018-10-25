@@ -80,7 +80,7 @@ p {
    left:0px;
    width: 1300px;
    height:740px;
-   background: linear-gradient( rgb(180,20,20), rgb(120,0,0) );
+   /*background: linear-gradient( rgb(180,20,20), rgb(120,0,0) );*/
 
    -webkit-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
    -moz-box-shadow: 0px 9px 20px 1px rgba(68,68,85,0.51);
@@ -90,7 +90,7 @@ p {
 #div-menu {
    z-index:600;
    position:absolute;
-   width:200px;
+   width:230px;
    top:-45px;
    /*left:500px;*/
    margin:0px;
@@ -108,6 +108,17 @@ p {
    padding:10px;
 }
 
+.container-all-pics {
+   display: inline-flex;
+   align-items: flex-end;
+   position:absolute;
+   bottom:10px;
+   left:0px;
+   z-index:500;
+   padding:10px;
+   overflow:visible;
+}
+
 .container-altre-pagine {
    position:absolute;
    top:60px;
@@ -117,6 +128,7 @@ p {
    padding:20px;
    padding-top:0px;
 }
+
 
 .quadro-anim {
    position:absolute;
@@ -216,9 +228,14 @@ box-shadow: -9px 3px 43px -10px rgba(0,0,0,0.7);
    overflow:hidden;
    top:-400px;
    left:500px;
+   /*
    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
-   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
+   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);*/
+   
+-webkit-box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
+-moz-box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
+box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
 }
 
 .anim-shadow {
@@ -334,7 +351,13 @@ box-shadow: -9px 3px 43px -10px rgba(0,0,0,0.7);
 
       <span class="glyphicon glyphicon-triangle-left" style="font-size:24px;float:left;color:rgba(255,255,255,0.4);cursor:pointer"
             onclick="previousPage()"></span>
-   
+            
+      <img id="img-bio" src="images/biography-icon.png" style="height:28px;cursor:pointer" 
+         data-toggle="tooltip"
+         data-placement="bottom"
+         title="Biografia / Biographic Info"
+         ng-click="ctrl.showBiografia()">&nbsp;
+      
       <img id="img-contatto" src="images/contact-icon.png" style="height:28px;cursor:pointer" 
          data-toggle="tooltip"
          data-placement="bottom"
@@ -400,7 +423,8 @@ box-shadow: -9px 3px 43px -10px rgba(0,0,0,0.7);
          ng-click="ctrl.showQuadro(ctrl.lista_quadri[0])">
       </div>
    
-      <div ng-repeat="q in ctrl.listaQuadri(1)">
+      <!--<div ng-repeat="q in ctrl.listaQuadri(1)"> -->
+      <div ng-repeat="q in ctrl.lista_quadri">
       <div id="{{q.id_div}}" class="quadro">
          <img id="{{q.id_div}}-img" class="img-quadro" ng-src="quadri/ridimensionati/mini/{{q.nome}}"
          ng-click="ctrl.showQuadro(q)">
@@ -476,6 +500,7 @@ box-shadow: -9px 3px 43px -10px rgba(0,0,0,0.7);
    <div ng-include="'genesi_quadro.html'"></div>
    <div ng-include="'ritratti.html'"></div>
    <div ng-include="'copie.html'"></div>
+   <div ng-include="'bio.html'"></div>
 
 
 </div>
@@ -496,6 +521,7 @@ $('#img-contatto').tooltip();
 $('#img-genesi-quadro').tooltip();
 $('#img-ritratto').tooltip();
 $('#img-replica').tooltip();
+$('#img-bio').tooltip();
 
 </script>
 

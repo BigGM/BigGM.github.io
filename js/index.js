@@ -119,6 +119,8 @@ function animate_massimo() {
             $('#'+quadro.id_div+"-img").addClass('img-quadro2')
           })
 
+          $('#outer-div').css({'background' : 'linear-gradient( rgb(180,20,20), rgb(120,0,0) )'})
+          
           $('#img-sfondo').animate({'opacity':0.1},700).removeClass('filter-sfondo')
 
           // e segna il completamento della home, questo consente di attivare

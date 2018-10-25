@@ -252,6 +252,24 @@
       this.mixDelay();
       
       
+      // Mostra la pagina della biografia
+      this.showBiografia = function() {
+         console.log("showBiografia");
+         $('#cover-bio').css({'display':'block'});
+         $('#div-bio').css({display:'block'})
+         $('#div-bio').animate({opacity:1,top:'30px'}, 600);
+      }
+      
+      // Nasconde la pagina della biografia
+      this.hideBiografia = function() {
+         console.log("hideBiografia");
+         $('#div-bio').animate({opacity:0, top:'20px'}, 600,function() {
+            $('#div-bio').css({display:'none'})
+            $('#cover-bio').css({'display':'none'});
+         });
+      }
+      
+      
       // Mostra la pagina del contatto
       this.showContatto = function() {
          $('#cover-contatto').css({'display':'block'});
