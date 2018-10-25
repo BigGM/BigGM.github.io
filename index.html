@@ -90,12 +90,11 @@ p {
 #div-menu {
    z-index:600;
    position:absolute;
-   width:230px;
-   top:-45px;
-   /*left:500px;*/
+   /*width:230px;*/
+   top:-50px;
    margin:0px;
-   padding:4px 6px;
-   background-color:rgba(255,255,255,0.3);
+   padding:6px 0px;
+   background-color:rgba(30,0,0,0.9);
 }
 
 .container-prima-pagina {
@@ -310,6 +309,22 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
    filter: blur(0.17rem);
 }
 
+.icon-menu {
+   height:32px;
+   cursor:pointer;
+   transition: transform .7s;
+}
+.icon-menu:hover {  
+   transform:scale(1.2);
+}
+
+.arrow-menu {
+   font-size:26px;
+   color:rgba(0,200,0,1);
+   cursor:pointer;
+   margin: 0px 6px;
+}
+
 </style>
 </head>
 
@@ -342,37 +357,38 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
    <!-- menu  -->
    <div id="div-menu">
    
-      <span class="glyphicon glyphicon-triangle-right" style="font-size:24px;float:right;color:rgba(255,255,255,0.4);cursor:pointer"
+      <span class="glyphicon glyphicon-triangle-right arrow-menu" style="float:right"
             onclick="nextPage()"></span>
 
-      <span class="glyphicon glyphicon-triangle-left" style="font-size:24px;float:left;color:rgba(255,255,255,0.4);cursor:pointer"
+      <span class="glyphicon glyphicon-triangle-left arrow-menu" style="float:left"
             onclick="previousPage()"></span>
             
-      <img id="img-bio" src="images/biography-icon.png" style="height:28px;cursor:pointer" 
+      <img id="img-bio" src="images/biography-icon.png" class="icon-menu" 
          data-toggle="tooltip"
          data-placement="bottom"
          title="Biografia<br>Biographical Notes"
          ng-click="ctrl.showBiografia()">&nbsp;
       
-      <img id="img-contatto" src="images/contact-icon.png" style="height:28px;cursor:pointer" 
+      <img id="img-contatto" src="images/contact-icon.png" class="icon-menu" 
          data-toggle="tooltip"
          data-placement="bottom"
          title="Info&nbsp;di&nbsp;contatto<br>Contact&nbsp;Info"
          ng-click="ctrl.showContatto()">&nbsp;
       
-      <img id="img-genesi-quadro" src="images/canvas.png" style="height:28px;cursor:pointer"
+      <img id="img-genesi-quadro" src="images/canvas.png" class="icon-menu" 
          data-toggle="tooltip"
          data-placement="bottom"
          title="Genesi&nbsp;di&nbsp;un&nbsp;dipinto<br>Birth of a painting"
          ng-click="ctrl.showGenesi()">
          
-      <img id="img-ritratto" src="images/raffaello-maddalena-doni.png" style="height:28px;cursor:pointer"
+      <!-- <img id="img-ritratto" src="images/raffaello-maddalena-doni.png" style="height:28px;cursor:pointer" -->
+      <img id="img-ritratto" src="images/ritratto.jpg" class="icon-menu" 
          data-toggle="tooltip"
          data-placement="bottom"
          title="Ritratti<br>Portraits"
          ng-click="ctrl.showRitratti()">
          
-      <img id="img-replica" src="images/replica.png" style="height:28px;cursor:pointer"
+      <img id="img-replica" src="images/replica.png" class="icon-menu" 
          data-toggle="tooltip"
          data-placement="bottom"
          title="Riproduzioni<br>Copies"
@@ -391,7 +407,7 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
    <!-- div con l'info sul web master -->
    <div id="div-web-master" style="z-index:600;position:absolute;bottom:-50px;left:370px;width:600px;background-color:rgba(20,30,40,0.8);height:50px;padding-top:4px;">
    <button type="button" class="close" style="position:relative;top:-10px;font-size:15px;padding:2px;" onclick="closeWebMasterInfo()">&times;</button>
-      <label class="label-info2">Web Master: Giuseppe Mastrantonio (+39 331 450 7445)</label>
+      <label class="label-info2">Designer: Giuseppe Mastrantonio (+39 331 450 7445)</label>
       <p style="line-height:90%;"><label class="label-info2">giuseppe.mastrantonio.66@gmail.com</label></p>
    </div>
 
