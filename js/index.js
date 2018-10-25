@@ -114,13 +114,8 @@ function animate_massimo() {
                animate_cuadro_pagina1(quadro);
           });
 
-          // Aggiunge la classe per effetto zoom su tutte le miniature
-          data_quadri.forEach( function(quadro) {
-            $('#'+quadro.id_div+"-img").addClass('img-quadro2')
-          })
 
           $('#outer-div').css({'background' : 'linear-gradient( rgb(180,20,20), rgb(120,0,0) )'})
-          
           $('#img-sfondo').animate({'opacity':0.1},700).removeClass('filter-sfondo')
 
           // e segna il completamento della home, questo consente di attivare
@@ -222,9 +217,12 @@ function animate_cuadro(data) {
 }
 
 
-function animate_cuadro_pagina1(data) {
-   var q = $('#'+data.id_div);
-   q.css({display:'block'}).animate( {opacity:1}, 1000);
+function animate_cuadro_pagina1(quadro) {
+   let q = $('#'+quadro.id_div);
+   q.css({display:'block'}).animate( {opacity:1}, 1000, function() {
+      // al termine dell'animazione aggiunge la classe per lo zoom
+      $('#'+quadro.id_div+"-img").addClass('img-quadro2')
+   });
 }
    
 

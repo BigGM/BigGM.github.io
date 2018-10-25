@@ -102,7 +102,7 @@ p {
    display: inline-flex;
    align-items: flex-end;
    position:absolute;
-   bottom:10px;
+   bottom:30px;
    left:0px;
    z-index:500;
    padding:10px;
@@ -226,13 +226,9 @@ box-shadow: -9px 3px 43px -10px rgba(0,0,0,0.7);
    width:300px;
    height:450px;
    overflow:hidden;
-   top:-400px;
+   top:-380px;
    left:500px;
-   /*
-   -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
-   -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);
-   box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.8);*/
-   
+
 -webkit-box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
 -moz-box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
 box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
@@ -355,7 +351,7 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
       <img id="img-bio" src="images/biography-icon.png" style="height:28px;cursor:pointer" 
          data-toggle="tooltip"
          data-placement="bottom"
-         title="Biografia / Biographic Info"
+         title="Biografia / Biographical Notes"
          ng-click="ctrl.showBiografia()">&nbsp;
       
       <img id="img-contatto" src="images/contact-icon.png" style="height:28px;cursor:pointer" 
@@ -438,7 +434,7 @@ box-shadow: 0px 5px 25px -5px rgba(0,0,0,1);
       <div id="pagina-{{p}}" class="container-altre-pagine" style="display:none;opacity:0">
           <div ng-repeat="q in ctrl.listaQuadri( p )">
              <div id="{{q.id_div}}" class="quadro2"  >
-                <img id="{{q.id_div}}-img" class="img-quadro" src="quadri/ridimensionati/mini/{{q.nome}}"
+                <img id="{{q.id_div}}-img" class="img-quadro img-quadro2" src="quadri/ridimensionati/mini/{{q.nome}}"
                 ng-click="ctrl.showQuadro(q)">
              </div>
           </div>
