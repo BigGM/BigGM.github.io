@@ -53,17 +53,16 @@
          <button type="button" class="close" style="margin:5px" ng-click="ctrl.hideBiografia()">&times;</button>
       </div>
       
-      <div class="container"
+      <div id="container-bio" class="container"
          style="overflow-y:auto;
                 text-align:left;
                 font-size:16px;
                 padding-top:30px;
                 font-family:'Montserrat',sans-serif;
-                
                 height:620px;
                 ">
     
-      <div class="row">
+      <div class="row" style="width:100%">
          <div class="col-sm-6" style="border-right:2px solid rgba(0,0,0,0.4)">
             <span class="label-lingua">Italiano</span><br>
             Massimo Necci nasce a Roma nel giugno del 1960.
@@ -88,7 +87,7 @@
       
       <div class="row" style="height:40px;width:100%"></div>
       
-      <div class="row">
+      <div class="row" style="width:100%">
          <div class="col-sm-6" style="border-right:2px solid rgba(0,0,0,0.4)">
          <span class="label-lingua">Español</span><br>
          Massimo Necci nació en Roma en junio de 1960. 
@@ -133,4 +132,8 @@
       </div>
 </div>
 </div>
+
+<script>
+  $("#container-bio").overlayScrollbars({});
+</script>
 

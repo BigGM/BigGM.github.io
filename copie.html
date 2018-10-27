@@ -79,7 +79,7 @@
       
       <!-- NB. la classe di stile img-quadro2 e' definita in index.html
          serve per l'animazione all'ingresso del mouse su un ritratto -->
-      <div style="width:100%;height:630px;overflow:auto">
+      <div id="super-copie-container" style="width:100%;height:630px;overflow:auto;">
          <div id="copie-container">
             <div ng-repeat="q in ctrl.copie">
                <div id="{{q.id}}" class="div-copia">
@@ -99,3 +99,6 @@
 </div>
 </div>
 
+<script>
+   $('#super-copie-container').overlayScrollbars({});
+</script>
